@@ -1,0 +1,65 @@
+宾馆很大，
+[pair('宾馆', 'n'), pair('很大', 'a'), pair('，', 'x')]
+但是有点乱，
+[pair('但是', 'c'), pair('有点', 'n'), pair('乱', 'd'), pair('，', 'x')]
+不喜欢，
+[pair('不', 'd'), pair('喜欢', 'v'), pair('，', 'x')]
+希望可以改进
+[pair('希望', 'v'), pair('可以', 'c'), pair('改进', 'v')]
+
+宾馆很大，但是有点乱，不喜欢，希望可以改进
+Score:-1.6
+Sub-clause0: 
+Sub-clause1: conjunction:但是 negative:有点1-乱 
+Sub-clause2: positive:不1-喜欢 
+Sub-clause3: positive:希望 可以 
+{'score': -1.6, 'su-clause0': {'score': 0, 'positive': [], 'negative': [], 'conjunction': [], 'punctuation': [], 'pattern': []}, 'su-clause1': {'score': -1.6, 'positive': [], 'negative': [{'key': '乱', 'adverb': [{'key': '有点', 'position': 1, 'value': 0.8}], 'denial': [], 'value': 1.0, 'score': 0.8}], 'conjunction': [{'key': '但是', 'value': 2.0}], 'punctuation': [], 'pattern': []}, 'su-clause2': {'score': -2.0, 'positive': [{'key': '喜欢', 'adverb': [], 'denial': [{'key': '不', 'position': 1, 'value': 1.0}], 'value': 2.0, 'score': -2.0}], 'negative': [], 'conjunction': [], 'punctuation': [], 'pattern': []}, 'su-clause3': {'score': 2.0, 'positive': [{'key': '希望', 'adverb': [], 'denial': [], 'value': 1.0, 'score': 1.0}, {'key': '可以', 'adverb': [], 'denial': [], 'value': 1.0, 'score': 1.0}], 'negative': [], 'conjunction': [], 'punctuation': [], 'pattern': []}}
+
+
+
+要是再靠近市中心一点就好了呢
+[pair('要是', 'c'), pair('再', 'd'), pair('靠近', 'v'), pair('市中心', 'n'), pair('一点', 'm'), pair('就', 'd'), pair('好', 'a'), pair('了', 'ul'), pair('呢', 'y')]
+
+要是再靠近市中心一点就好了呢
+Score:-1.0
+Sub-clause0: pattern:如果…就好了 
+{'score': -1.0, 'su-clause0': {'score': -1.0, 'positive': [], 'negative': [], 'conjunction': [], 'punctuation': [], 'pattern': [{'key': '如果…就好了', 'value': 1.0}]}}
+
+
+
+不好吃，
+[pair('不', 'd'), pair('好吃', 'v'), pair('，', 'x')]
+再也不点他们家的外卖了
+[pair('再也不点', 'v'), pair('他们', 'r'), pair('家', 'm'), pair('的', 'uj'), pair('外卖', 'v'), pair('了', 'ul')]
+
+不好吃，再也不点他们家的外卖了
+Score:-6.0
+Sub-clause0: positive:不1-好吃 
+Sub-clause1: negative:再也不……:再也不点他们家的外卖了 
+{'score': -6.0, 'su-clause0': {'score': -3.0, 'positive': [{'key': '好吃', 'adverb': [], 'denial': [{'key': '不', 'position': 1, 'value': 1.0}], 'value': 3.0, 'score': -3.0}], 'negative': [], 'conjunction': [], 'punctuation': [], 'pattern': []}, 'su-clause1': {'score': -3.0, 'positive': [], 'negative': [{'key': '再也不……:再也不点他们家的外卖了', 'adverb': [], 'denial': [], 'value': -3.0, 'score': -3.0}], 'conjunction': [], 'punctuation': [], 'pattern': []}}
+
+
+
+太咸了
+[pair('太', 'd'), pair('咸', 'a'), pair('了', 'ul')]
+
+太咸了
+Score:-2.0
+Sub-clause0: negative:太1-咸 
+{'score': -2.0, 'su-clause0': {'score': -2.0, 'positive': [], 'negative': [{'key': '咸', 'adverb': [{'key': '太', 'position': 1, 'value': 2.0}], 'denial': [], 'value': 1.0, 'score': 2.0}], 'conjunction': [], 'punctuation': [], 'pattern': []}}
+
+
+
+好吃，
+[pair('好吃', 'v'), pair('，', 'x')]
+喜欢
+[pair('喜欢', 'v')]
+
+好吃，喜欢
+Score:5.0
+Sub-clause0: positive:好吃 
+Sub-clause1: positive:喜欢 
+{'score': 5.0, 'su-clause0': {'score': 3.0, 'positive': [{'key': '好吃', 'adverb': [], 'denial': [], 'value': 3.0, 'score': 3.0}], 'negative': [], 'conjunction': [], 'punctuation': [], 'pattern': []}, 'su-clause1': {'score': 2.0, 'positive': [{'key': '喜欢', 'adverb': [], 'denial': [], 'value': 2.0, 'score': 2.0}], 'negative': [], 'conjunction': [], 'punctuation': [], 'pattern': []}}
+
+
+
